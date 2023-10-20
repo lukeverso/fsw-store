@@ -22,6 +22,14 @@ export default async function Home() {
 		}
 	});
 
+	const mouses = await db.product.findMany({
+		where: {
+			category: {
+				slug: 'mouses'
+			}
+		}
+	});
+
 	return (
 		<div>
 			<PromoBanner
@@ -47,6 +55,10 @@ export default async function Home() {
 				src='/banner-home-03.png'
 				alt='Até 20% de desconto em fones!'
 			/>
+			<div className='mt-8'>
+				<SectionTitle>Mouses</SectionTitle>
+				<ProductList products={mouses} />
+			</div>
 		</div>
 	);
 };
