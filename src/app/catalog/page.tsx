@@ -7,8 +7,8 @@ const CatalogPage = async () => {
 	const categories = await db.category.findMany({});
 
 	return (
-		<div className='p-5'>
-			<Badge className='gap-1 text-base uppercase px-3 py-[0.375rem] border-2 border-primary' variant='outline' >
+		<div className='flex flex-col gap-8 p-5'>
+			<Badge className='w-fit gap-1 text-base uppercase px-3 py-[0.375rem] border-2 border-primary' variant='outline' >
 				<ShapesIcon size={16} />
 				Catálogo
 			</Badge>
