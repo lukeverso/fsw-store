@@ -96,9 +96,16 @@ const Header = () => {
 					<span className='text-primary'>FSW</span> Store
 				</h1>
 			</Link>
-			<Button size='icon' variant='outline'>
-				<ShoppingCartIcon />
-			</Button>
+			<Sheet>
+				<SheetTrigger asChild>
+					<Button size='icon' variant='outline'>
+						<ShoppingCartIcon />
+					</Button>
+				</SheetTrigger>
+				<SheetContent>
+					<h1>cart</h1>
+				</SheetContent>
+			</Sheet>
 		</Card>
 	);
 }
